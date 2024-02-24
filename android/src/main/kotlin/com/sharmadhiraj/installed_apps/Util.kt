@@ -27,9 +27,6 @@ class Util {
             map["package_name"] = app.packageName
             map["icon"] =
                 if (withIcon) drawableToByteArray(app.loadIcon(packageManager)) else ByteArray(0)
-            val packageInfo = packageManager.getPackageInfo(app.packageName, 0)
-            map["version_name"] = packageInfo.versionName
-            map["version_code"] = getVersionCode(packageInfo)
             return map
         }
 
